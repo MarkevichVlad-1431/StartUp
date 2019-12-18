@@ -1,0 +1,124 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.works {
+  height: 1380px;
+
+  @media screen and (max-width: 992px) {
+    height: auto;
+  }
+
+  .titleWorks {
+    text-align: center;
+    @extend .titleSection;
+  }
+
+  .lineWorks {
+    @extend .lineSection;
+  }
+
+  .options {
+    text-align: center;
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      margin: 0 13px;
+
+      font-family: $services_tagline;
+      font-size: 16px;
+      line-height: 24px;
+      color: $services_color_text;
+
+      text-decoration: none;
+
+      @media screen and (max-width: 992px) {
+        margin: 0 8px;
+
+        font-size: 10px;
+        line-height: 14px;
+
+      }
+
+      &:hover {
+        color: $button_hover_color;
+      }
+    }
+  }
+
+  .variant {
+    position: relative;
+
+    height: 320px;
+    padding-top: 100px;
+    margin-bottom: 30px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    &:hover {
+      .titleVariant {
+        display: block;
+      }
+
+      .taglineVariant {
+        display: block;
+      }
+
+      .view {
+        display: block;
+      }
+
+      &::before {
+        @extend .beforeWorks;
+        opacity: 0.6;
+      }
+    }
+
+    .titleVariant {
+      position: relative;
+
+      display: none;
+
+      font-family: $text;
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+    }
+
+    .taglineVariant {
+      position: relative;
+
+      display: none;
+      padding: 18px 0 20px 0;
+
+      font-family: $services_tagline;
+      font-size: 12px;
+      line-height: 24px;
+      color: #fff;
+    }
+
+    .view {
+      position: relative;
+
+      display: none;
+      margin: 0 auto;
+      height: 40px;
+      width: 100px;
+
+      font-family: $services_tagline;
+      font-size: 14px;
+      line-height: 24px;
+      color: $button_hover_color;
+      text-transform: uppercase;
+
+      background-color: #fff;
+    }
+  }
+}

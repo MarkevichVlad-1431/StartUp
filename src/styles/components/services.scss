@@ -1,0 +1,77 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.services {
+  height: 585px;
+  padding: 95px 0;
+
+  background-color: #fff;
+
+  @media screen and (max-width: 769px) {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .titleServices {
+    text-align: center;
+    @extend .titleSection;
+  }
+
+  .lineServices {
+    @extend .lineSection;
+  }
+
+  .taglineServices {
+    @extend .taglineSection;
+  }
+
+  .options {
+    margin-top: 60px;
+
+    @media screen and (max-width: 576px) {
+      margin-top: 10px;
+    }
+
+    .option {
+      text-align: center;
+
+      @media screen and (max-width: 576px) {
+        margin-bottom: 20px;
+      }
+
+      button {
+        outline: none;
+
+        img {
+          @media screen and (max-width: 576px) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .title {
+        margin: 25px 0;
+
+        font-family: $text;
+        font-size: 14px;
+        line-height: 24px;
+        color: $services_color_text;
+
+        text-transform: uppercase;
+      }
+
+      .text {
+        font-family: $services_tagline;
+        font-size: 14px;
+        line-height: 24px;
+        color: $services_color_text;
+
+        @media screen and (max-width: 769px) {
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

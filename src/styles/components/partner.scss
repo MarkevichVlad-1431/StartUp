@@ -1,0 +1,51 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.partner {
+
+  //padding: 90px 0;
+  .logo {
+    padding: 70px 0;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .firstSlid {
+    @extend .text_partner;
+  }
+
+  .secondSlid {
+    @extend .text_partner;
+    display: none;
+    background-color: #ddd;
+  }
+
+  .thirdSlid {
+    @extend .text_partner;
+    display: none;
+    background-color: #eee;
+  }
+
+  .buttons {
+    text-align: center;
+    padding: 35px 0;
+
+    @media screen and (max-width: 769px) {
+      padding: 15px 0;
+    }
+
+    #firstSlid {
+      @extend .button_partner;
+    }
+
+    #secondSlid {
+      @extend .button_partner;
+    }
+
+    #thirdSlid {
+      @extend .button_partner;
+    }
+  }
+}

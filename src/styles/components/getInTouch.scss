@@ -1,0 +1,136 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.getInTouch {
+  padding: 95px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 20px 0;
+  }
+
+  .titleTouch {
+    @extend .titleSection;
+  }
+
+  .lineTouch {
+    @extend .lineSection;
+  }
+
+  .taglineTouch {
+    margin-bottom: 65px;
+    @extend .taglineSection;
+
+    @media screen and (max-width: 769px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .address {
+    @extend .touch_contact;
+  }
+
+  .phone {
+    @extend .touch_contact;
+  }
+
+  .mail {
+    @extend .touch_contact;
+  }
+
+  form {
+    input {
+      margin: 0 30px 20px 0;
+      padding: 15px;
+      width: 100%;
+      height: 45px;
+
+      font-family: $services_tagline;
+      font-size: 12px;
+      line-height: 20px;
+      color: $services_color_text;
+      text-transform: uppercase;
+
+      border: 1px solid $services_color_text;
+
+      @media screen and (max-width: 769px) {
+        margin: 0;
+        padding: 0;
+        height: 20px;
+
+        font-size: 8px;
+        line-height: 12px;
+      }
+
+      &:focus {
+        border: 1px solid $button_hover_color;
+      }
+    }
+
+    .message {
+      margin: 0 30px 20px 0;
+      padding: 0 15px 15px 15px;
+      width: 100%;
+      height: 100px;
+
+      font-family: $services_tagline;
+      font-size: 12px;
+      vertical-align: baseline;
+      line-height: 20px;
+      color: $services_color_text;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 769px) {
+        margin: 0 0 10px 0;
+        padding: 0;
+        height: 20px;
+
+        font-size: 8px;
+        line-height: 12px;
+      }
+
+      &:focus {
+        border: 1px solid $button_hover_color;
+      }
+    }
+  }
+
+  button {
+    padding: 15px 35px;
+
+    font-family: $services_tagline;
+    font-size: 12px;
+    line-height: 20px;
+    color: $services_color_text;
+    text-transform: uppercase;
+
+    border: 1px solid $services_color_text;
+
+    @media (min-width: 769px) and (max-width: 992px) {
+      font-size: 10px;
+      padding: 5px 15px;
+    }
+
+    @media screen and (max-width: 769px) {
+      font-size: 8px;
+      line-height: 12px;
+      padding: 15px 5px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $button_hover_color;
+    }
+  }
+
+  .text {
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: $services_tagline;
+    color: $services_color_text;
+
+    span {
+      color: $button_hover_color;
+    }
+  }
+}

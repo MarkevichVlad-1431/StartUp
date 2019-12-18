@@ -1,0 +1,143 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.blog {
+  position: relative;
+
+  height: auto;
+  padding: 95px 0;
+
+  @media screen and (max-width: 769px) {
+    padding: 30px 0;
+    display: none;
+  }
+
+  .titleBlog {
+    @extend .titleSection;
+  }
+
+  .lineBlog {
+    @extend .lineSection;
+  }
+
+  .taglineBlog {
+    margin-bottom: 70px;
+    @extend .taglineSection;
+  }
+
+  .foto {
+    img {
+      width: 450px;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+
+      @media (min-width: 992px) and (max-width: 1200px) {
+        width: 300px;
+      }
+
+      @media (min-width: 770px) and (max-width: 992px) {
+        width: 200px;
+      }
+    }
+  }
+
+  .text {
+
+    &:hover {
+      .title {
+        color: $button_hover_color;
+
+      }
+
+      .tagline {
+        i {
+          color: $button_hover_color;
+        }
+      }
+
+      .readMore {
+        color: $button_hover_color;
+      }
+    }
+
+    .callendar {
+      padding: 20px;
+      width: 84px;
+      margin-bottom: 25px;
+
+      font-family: $text_title;
+      font-size: 24px;
+      line-height: 20px;
+      color: $blog_color_text;
+
+      border: 2px solid $services_color_text;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: auto;
+        padding: 5px;
+      }
+    }
+
+    .title {
+      margin-top: 15px;
+
+      font-family: $text;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $services_color_text;
+
+      @media screen and (max-width: 992px) {
+        margin-top: 0;
+      }
+    }
+
+    .tagline {
+      padding: 10px 0;
+
+      font-family: $services_tagline;
+      font-size: 14px;
+      line-height: 24px;
+      color: $blog_color_text;
+    }
+
+    .text {
+      font-family: $services_tagline;
+      font-size: 14px;
+      line-height: 24px;
+      color: $services_color_text;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    .readMore {
+      margin: 30px 0;
+
+      font-family: $services_tagline;
+      font-size: 13px;
+      line-height: 24px;
+      color: $blog_color_text;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 992px) {
+        margin: 10px;
+      }
+    }
+  }
+
+  .line {
+    padding: 40px 15px;
+
+    @media screen and (max-width: 992px) {
+      padding: 15px;
+    }
+  }
+}
